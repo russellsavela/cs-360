@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="208dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="112dp"
+        android:autofillHints="emailAddress"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusDown="@+id/editTextTextPassword"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="211dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="24dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusUp="@+id/editTextTextEmailAddress"
+        android:nextFocusDown="@+id/buttonCreateAccount"
+        />
+
+    <Button
+        android:id="@+id/buttonGotoSignInScreen"
+        style="@style/Button.Red"
+        android:layout_width="108dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="68dp"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusUp="@+id/buttonCreateAccount"
+        />
+
+    <Button
+        android:id="@+id/buttonCreateAccount"
+        style="@style/Button.Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="252dp"
+        android:text="@string/create_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusUp="@+id/editTextTextPassword"
+        android:nextFocusDown="@+id/buttonGotoSignInScreen"
+        />
+
+    <TextView
+        android:id="@+id/singUpTextView"
+        android:layout_width="139dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginBottom="540dp"
+        android:text="@string/sign_up_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="272dp"
+        android:text="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="243dp" />
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/password_text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/alreadyAccounTextView"
+        android:layout_width="168dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

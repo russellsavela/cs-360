@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/eventTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="660dp"
+        android:text="@string/events"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAddEvent"
+        android:layout_width="67dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="640dp"
+        android:text="@string/plusString"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- This will be populated in Java with the ,
+    RecyclerView, Text fields are placeholders for now -->
+    <LinearLayout
+        android:layout_width="304dp"
+        android:layout_height="522dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/eventPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Event detail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/eventDatePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Mon Aug 4 12:30 PM"
+            app:layout_constraintLeft_toRightOf="@+id/eventDatePlaceholder" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTaskView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/eventTitletextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="164dp"
+        android:text="Event Name"
+        app:layout_constraintEnd_toStartOf="@+id/DateTitletextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DateTitletextView"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="52dp"
+        android:text="Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

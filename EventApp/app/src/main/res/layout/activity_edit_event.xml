@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/editEventNameText"
+        android:layout_width="261dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="576dp"
+        android:text="@string/edit_event_details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusDown="@+id/timePickerEvent"
+        />
+
+    <EditText
+        android:id="@+id/editEventNameTextText"
+        android:labelFor="@+id/editEventNameText"
+        android:hint="@string/event_description"
+        android:autofillHints="Walk the dog"
+        android:layout_width="126dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginBottom="512dp"
+        android:ems="10"
+        android:inputType="text"
+        android:nextFocusDown="@+id/timePickerEvent"
+        android:text="@string/walk_the_dog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/buttonDeleteEvent"
+        style="@style/Button.Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="264dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusUp="@+id/buttonConfirmEdit"
+        />
+
+    <Button
+        android:id="@+id/buttonConfirmEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nextFocusUp="@+id/timePickerEvent"
+        android:nextFocusDown="@+id/buttonDeleteEvent"
+        />
+
+    <LinearLayout
+        android:layout_width="322dp"
+        android:layout_height="388dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TimePicker
+            android:id="@+id/timePickerEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="119dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="20dp"
+            android:timePickerMode="spinner"
+            android:nextFocusUp="@+id/editEventNameTextText"
+            android:nextFocusDown="@+id/timePickerEvent"
+            />
+
+        <DatePicker
+            android:id="@+id/datePickerEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:nextFocusUp="@+id/timePickerEvent"
+            android:nextFocusDown="@+id/buttonConfirmEdit"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
